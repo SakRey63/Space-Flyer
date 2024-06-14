@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerShip : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class PlayerShip : MonoBehaviour
 
     private void Awake()
     {
+        if (Controller.Instance == null)
+        {
+            SceneManager.LoadScene(0);
+            return;
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         _mR = GetComponent<MeshRenderer>();
         _controller = Controller.Instance;
