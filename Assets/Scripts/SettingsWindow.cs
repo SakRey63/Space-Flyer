@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SettingsWindow : MonoBehaviour
 {
     [SerializeField] private Slider _sliderMusic;
     [SerializeField] private Slider _sliderEffect;
