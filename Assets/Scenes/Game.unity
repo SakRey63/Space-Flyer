@@ -362,6 +362,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bgRenderer: {fileID: 356377633}
   _speed: 0.2
+--- !u!1 &674267247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 674267248}
+  m_Layer: 0
+  m_Name: PoolEnemyRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &674267248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674267247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1368942887}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &710686621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -568,6 +599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1368942887}
   - component: {fileID: 1368942886}
+  - component: {fileID: 1368942888}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -589,6 +621,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletPref: {fileID: 2178865376010767426, guid: a16aff11454d7f2499d9f996f695902b, type: 3}
   _poolBulletMy: {fileID: 1183817638}
+  _enemyPrefabs:
+  - {fileID: 690457151665908085, guid: 0364ee44c32694b4b8adbe0a7ccc8c25, type: 3}
+  _poolEnemyRoot: {fileID: 674267248}
 --- !u!4 &1368942887
 Transform:
   m_ObjectHideFlags: 0
@@ -603,8 +638,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1183817638}
+  - {fileID: 674267248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1368942888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368942885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5670cd2dab18ae438991bc4db73152b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minDelay: 2
+  _maxDelay: 4
+  _maxCountOneSpawn: 5
 --- !u!1 &1850136272
 GameObject:
   m_ObjectHideFlags: 0
